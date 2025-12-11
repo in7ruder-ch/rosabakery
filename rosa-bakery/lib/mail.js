@@ -24,8 +24,8 @@ export async function sendMail({ subject, text, html }) {
     }
 
     const info = await transporter.sendMail({
-      from: '"Rosa Bakery (Test)" <test@rosabakery.test>',
-      to: "test@rosabakery.test",
+      from: '"Rosa Bäckerei (Test)" <test@rosaBäckerei.test>',
+      to: "test@rosaBäckerei.test",
       subject,
       text,
       html,

@@ -12,10 +12,10 @@
   --font-mono: var(--font-geist-mono);
   --rosa-bg: #FDFAE9;
   --rosa-bg-soft: #FFFDF5;
-  --rosa-green: #4D6936;
+  --rosa-green: #4d6b35;
   --rosa-green-soft: #5D764A;
   --rosa-green-light: #708A59;
-  --rosa-gold: #D6CEA9;
+  --rosa-gold: #fdd8a3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,6 +69,10 @@ html {
 html,
 body {
   background-color: var(--rosa-green);
+  background-image: url("/img/back-texture-seamless-2.png");
+  background-size: 25%;     /* ajustá para más/menos textura */
+  background-repeat: repeat;  /* textura infinita */
+  opacity: 1;
 }
 
 .hover\:text-rosa-white:hover {

@@ -1,4 +1,18 @@
 import Link from "next/link";
+import { products } from "../data/products";
+
+const featuredFesttagstorten = products
+  .filter((p) => p.category === "festtagstorten" && p.featured)
+  .slice(0, 3);
+
+const featuredHochzeitstorten = products
+  .filter((p) => p.category === "hochzeitstorten" && p.featured)
+  .slice(0, 3);
+
+const featuredDelikatessen = products
+  .filter((p) => p.category === "delikatessen" && p.featured)
+  .slice(0, 3);
+
 
 export default function Home() {
   return (
@@ -6,12 +20,12 @@ export default function Home() {
       {/* HERO 3 COLUMNAS */}
       <section className="grid gap-6 md:grid-cols-3 items-stretch">
         {/* Columna izquierda - imagen */}
-        <div className="aspect-3/4 rounded-xl bg-white/10 border border-[#D6CEA9]/50 overflow-hidden"></div>
+        <div className="aspect-3/4 rounded-xl bg-white/90 border-[#D6CEA9]/50 overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/img/cake-1.jpeg')" }}></div>
 
         {/* Columna central - texto + CTA */}
-        <div className="rounded-xl bg-white/90 border border-[#D6CEA9]/80 px-6 py-8 flex flex-col justify-center gap-4 text-rosa-green">
+        <div className="rounded-xl bg-white/90  border-[#D6CEA9]/80 px-6 py-8 flex flex-col justify-center gap-4 text-rosa-green">
           <p className="text-xs tracking-[0.25em] uppercase text-rosa-muted">
-            Rosa Bakery
+            Rosa Bäckerei
           </p>
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug">
             Design-Torten für deine besonderen Momente
@@ -24,7 +38,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-3 mt-2">
             <Link
               href="/bestellen"
-              className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-[#4D6936] text-rosa-gold hover:bg-[#5D764A] transition-colors"
+              className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-[#4D6936] text-rosa-gold hover:bg-[#5D764A] hover:text-rosa-white transition-colors"
             >
               Jetzt bestellen
             </Link>
@@ -38,14 +52,24 @@ export default function Home() {
         </div>
 
         {/* Columna derecha - imagen */}
-        <div className="aspect-3/4 rounded-xl bg-white/10 border border-[#D6CEA9]/50 overflow-hidden"></div>
+        <div className="aspect-3/4 rounded-xl bg-white/10  border-[#D6CEA9]/50 overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/img/cake-2.jpg')" }}></div>
       </section>
 
-      {/* FRANJA DE MENSAJE */}
-      <section className="border border-dashed border-[#D6CEA9] rounded-xl py-6 px-4 text-center bg-transparent">
-        <p className="text-sm md:text-base tracking-wide text-rosa-gold">
-          Alle Torten werden individuell nach deinem Geschmack und Stil
-          kreiert.
+      {/* FRANJA DE NACHRICHT / MESSAGE STRIP */}
+      <section className="relative rounded-xl h-40 flex items-center justify-center text-center overflow-hidden">
+
+        {/* Imagen DE FONDO independiente */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat filter brightness-70 opacity-80"
+          style={{ backgroundImage: "url('/img/texture-4.jpg')" }}
+        />
+
+        {/* Overlay opcional para suavizar (si querés, se puede borrar) */}
+        {/* <div className="absolute inset-0 bg-[#FDFAE9]/60" /> */}
+
+        {/* TEXTO - siempre arriba */}
+        <p className="relative z-10 text-sm md:text-lg tracking-wide text-rosa-white font-semibold px-4">
+          Alle Torten werden individuell nach deinem Geschmack und Stil kreiert.
         </p>
       </section>
 
@@ -69,15 +93,15 @@ export default function Home() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {[1, 2, 3].map((item) => (
+          {featuredFesttagstorten.map((cake) => (
             <div
-              key={item}
+              key={cake.id}
               className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2"
             >
               <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
               <div className="px-1 pb-2 text-rosa-green">
-                <p className="text-sm font-medium">Festtagstorte {item}</p>
-                <p className="text-xs text-rosa-green-muted">Ab CHF 80.–</p>
+                <p className="text-sm font-medium">{cake.name}</p>
+                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
               </div>
             </div>
           ))}
@@ -104,15 +128,15 @@ export default function Home() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {[1, 2, 3].map((item) => (
+          {featuredHochzeitstorten.map((cake) => (
             <div
-              key={item}
+              key={cake.id}
               className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2"
             >
               <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
               <div className="px-1 pb-2 text-rosa-green">
-                <p className="text-sm font-medium">Hochzeitstorte {item}</p>
-                <p className="text-xs text-rosa-green-muted">Ab CHF 150.–</p>
+                <p className="text-sm font-medium">{cake.name}</p>
+                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
               </div>
             </div>
           ))}
@@ -139,15 +163,15 @@ export default function Home() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {[1, 2, 3].map((item) => (
+          {featuredDelikatessen.map((item) => (
             <div
-              key={item}
+              key={item.id}
               className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2"
             >
               <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
               <div className="px-1 pb-2 text-rosa-green">
-                <p className="text-sm font-medium">Delikatesse {item}</p>
-                <p className="text-xs text-rosa-green-muted">Ab CHF 5.–</p>
+                <p className="text-sm font-medium">{item.name}</p>
+                <p className="text-xs text-rosa-green-muted">{item.price}</p>
               </div>
             </div>
           ))}
@@ -155,16 +179,16 @@ export default function Home() {
       </section>
 
       {/* ÜBER UNS + CTA KONTAKT */}
-      <section className="grid gap-8 md:grid-cols-3 items-stretch">
+      <section className="grid gap-8 md:grid-cols-3 items-center">
         <div className="space-y-4 md:col-span-2 text-rosa-white">
           <p className="text-xs tracking-[0.25em] uppercase text-rosa-cream">
-            Über Rosa Bakery
+            Über Rosa Bäckerei
           </p>
           <h2 className="text-lg md:text-xl font-semibold">
             Handgemachte Torten mit Herz und Design.
           </h2>
           <p className="text-sm text-rosa-gold leading-relaxed ">
-            Bei Rosa Bakery entstehen Torten, die genauso einzigartig sind wie
+            Bei Rosa Bäckerei entstehen Torten, die genauso einzigartig sind wie
             deine Anlässe. Jede Kreation wird von Hand gebacken, liebevoll
             dekoriert und individuell auf deinen Geschmack abgestimmt – von
             festlichen Geburtstagstorten bis zu eleganten Hochzeitstorten.
@@ -174,6 +198,14 @@ export default function Home() {
             einem Auge für Ästhetik – damit deine Torte nicht nur gut schmeckt,
             sondern auch auf jedem Foto glänzt.
           </p>
+          <div className="pt-2">
+            <Link
+              href="/ueber-uns"
+              className="inline-flex items-center bg-[#D6CEA9] justify-center rounded-full px-5 py-2.5 text-sm font-medium border border-[#4D6936] text-rosa-green hover:bg-[#ffffff] transition-colors"
+            >
+              Mehr über uns erfahren
+            </Link>
+          </div>
         </div>
 
         {/* CTA card — no se cambia */}
@@ -195,7 +227,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/kontakt"
-              className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-[#4D6936] text-rosa-gold hover:bg-[#5D764A] transition-colors"
+              className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-[#4D6936] text-rosa-gold hover:bg-[#5D764A] hover:text-rosa-white   transition-colors"
             >
               Kontakt aufnehmen
             </Link>
@@ -266,7 +298,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="hidden md:inline-flex text-xs md:text-sm underline-offset-4 hover:underline text-rosa-white"
           >
-            @rosabakery auf Instagram
+            @rosaBäckerei auf Instagram
           </a>
         </div>
 

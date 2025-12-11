@@ -1,26 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { products } from "../../data/products";
 
-const festtagstorten = [
-  { id: 1, name: "Festtagstorte Beeren", price: "Ab CHF 80.–" },
-  { id: 2, name: "Schokoladen-Traum", price: "Ab CHF 85.–" },
-  { id: 3, name: "Zitronen-Torte", price: "Ab CHF 80.–" },
-  { id: 4, name: "Nuss-Karamell", price: "Ab CHF 90.–" },
-];
+const festtagstorten = products.filter(
+  (p) => p.category === "festtagstorten"
+);
 
-const hochzeitstorten = [
-  { id: 1, name: "Hochzeitstorte Klassik", price: "Ab CHF 150.–" },
-  { id: 2, name: "Semi-Naked Torte", price: "Ab CHF 180.–" },
-  { id: 3, name: "Blumentorte 3-stöckig", price: "Ab CHF 220.–" },
-];
+const hochzeitstorten = products.filter(
+  (p) => p.category === "hochzeitstorten"
+);
 
-const delikatessen = [
-  { id: 1, name: "Cupcakes Mixed Box (6 Stk.)", price: "Ab CHF 30.–" },
-  { id: 2, name: "Macarons Selection", price: "Ab CHF 32.–" },
-  { id: 3, name: "Mini-Törtchen", price: "Ab CHF 28.–" },
-  { id: 4, name: "Brownie Bites", price: "Ab CHF 24.–" },
-];
+const delikatessen = products.filter(
+  (p) => p.category === "delikatessen"
+);
 
 export default function Produkte() {
   const handleScrollTo = (id) => (event) => {
@@ -39,7 +32,7 @@ export default function Produkte() {
           Sortiment
         </p>
         <h1 className="text-2xl md:text-3xl font-semibold text-rosa-white">
-          Torten &amp; Delikatessen von Rosa Bakery
+          Torten &amp; Delikatessen von Rosa Bäckerei
         </h1>
         <p className="text-sm md:text-base text-rosa-cream max-w-2xl">
           Hier findest du eine Auswahl unserer Festtags- und Hochzeitstorten
@@ -74,7 +67,7 @@ export default function Produkte() {
         </button>
         <Link
           href="/bestellen"
-          className="rounded-full px-4 py-2 text-rosa-green bg-[#D6CEA9] text-xs md:text-sm font-medium hover:bg-[#E5DFC7] transition-colors"
+          className="rounded-full px-4 py-2 text-rosa-green bg-[#D6CEA9] text-xs md:text-sm font-medium hover:bg-[#E5DFC7]  transition-colors"
         >
           Individuelle Torte anfragen
         </Link>
@@ -192,7 +185,7 @@ export default function Produkte() {
         <div className="flex flex-wrap gap-3">
           <Link
             href="/bestellen"
-            className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-[#4D6936] text-rosa-gold hover:bg-[#5D764A] transition-colors"
+            className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-[#4D6936] text-rosa-gold hover:bg-[#5D764A] hover:text-rosa-white transition-colors"
           >
             Anfrage senden
           </Link>

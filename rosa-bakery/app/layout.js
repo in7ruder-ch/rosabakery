@@ -2,75 +2,84 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Rosa Bakery",
-  description: "Rosa Bakery - Design-Torten und Delikatessen",
+  title: "Rosa Bäckerei",
+  description: "Rosa Bäckerei - Design-Torten und Delikatessen",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
-      <body className="min-h-screen bg-[#4D6936] text-rosa-gold">
+      <body className="min-h-screen bg-[#4D6936] text-rosa-cream">
         {/* HEADER */}
-        <header className="border-b border-[#D6CEA9]/60 bg-[#4D6936]">
-          <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            {/* Logo / Marca */}
-            <div className="text-lg font-semibold tracking-wide">
-              Rosa Bakery
-            </div>
+        <header className="border-b border-[#D6CEA9]/60  py-6">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
 
-            {/* Navegación */}
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-              <Link href="/" className="hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link
-                href="/produkte"
-                className="hover:text-white transition-colors"
-              >
-                Produkte
-              </Link>
-              <Link
-                href="/ueber-uns"
-                className="hover:text-white transition-colors"
-              >
-                Über uns
-              </Link>
-              <Link
-                href="/kontakt"
-                className="hover:text-white transition-colors"
-              >
-                Kontakt
-              </Link>
-              <Link
-                href="/bestellen"
-                className="hover:text-white transition-colors"
-              >
-                Bestellen
-              </Link>
+            {/* Logo centrado */}
+            <Link href="/" className="flex items-center mb-4">
+              <img
+                src="/img/logo.png"
+                alt="Rosa Bäckerei Logo"
+                className="w-50 object-contain"
+              />
+            </Link>
 
-              {/* Instagram (placeholder) */}
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm hover:text-white transition-colors"
-              >
-                Instagram
-              </a>
-            </nav>
+            {/* Navegación centrada */}
+            <nav className="flex items-center gap-6 text-sm font-medium">
+  <Link href="/" className="hover:text-white transition-colors">Home</Link>
+  <Link href="/produkte" className="hover:text-white transition-colors">Produkte</Link>
+  <Link href="/ueber-uns" className="hover:text-white transition-colors">Über uns</Link>
+  <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
+  <Link href="/bestellen" className="hover:text-white transition-colors">Bestellen</Link>
+
+  {/* Icono Instagram */}
+  <a
+    href="https://instagram.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition-colors"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="w-5 h-5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M16.5 7.5h.008v.008H16.5V7.5z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+      />
+    </svg>
+  </a>
+</nav>
+
+
           </div>
         </header>
+
 
         {/* CONTENIDO PRINCIPAL */}
         <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
 
         {/* FOOTER */}
-        <footer className="mt-16 border-t border-[#D6CEA9]/60 bg-[#4D6936] py-10">
+        <footer className="mt-16 border-t border-[#D6CEA9]/60 py-10">
           <div className="max-w-6xl mx-auto px-4 grid gap-8 md:grid-cols-3">
             {/* Columna 1 */}
             <div className="space-y-2">
               <h3 className="text-base font-semibold text-rosa-white">
-                Rosa Bakery
+                Rosa Bäckerei
               </h3>
               <p className="text-sm text-rosa-gold-soft">
                 Handgemachte Torten &amp; Delikatessen aus der Region.
@@ -82,10 +91,10 @@ export default function RootLayout({ children }) {
               <p className="font-medium text-rosa-white">Kontakt</p>
               <p>Bern, Schweiz</p>
               <a
-                href="mailto:rosa.bakery@email.com"
+                href="mailto:rosa.Bäckerei@email.com"
                 className="hover:underline underline-offset-4"
               >
-                rosa.bakery@email.com
+                rosa.Bäckerei@email.com
               </a>
 
               <a
@@ -110,7 +119,7 @@ export default function RootLayout({ children }) {
           </div>
 
           <div className="text-center text-xs text-rosa-gold-subtle mt-8">
-            © {new Date().getFullYear()} Rosa Bakery — Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Rosa Bäckerei — Alle Rechte vorbehalten.
           </div>
         </footer>
         {/* WHATSAPP FLOATING BUTTON */}

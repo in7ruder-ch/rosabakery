@@ -13,7 +13,7 @@ export default function UeberUns() {
             Eine junge Familienbäckerei mit viel Herz
           </h1>
           <p className="text-sm md:text-base text-rosa-cream max-w-xl">
-            Rosa Bakery ist eine neue, familiengeführte Manufaktur für
+            Rosa Bäckerei ist eine neue, familiengeführte Manufaktur für
             Design-Torten und Delikatessen. Wir verbinden hochwertige Zutaten,
             sorgfältige Handarbeit und persönliche Betreuung – von der ersten
             Anfrage bis zur fertigen Torte.
@@ -105,7 +105,7 @@ export default function UeberUns() {
         <div className="flex flex-wrap gap-3">
           <Link
             href="/bestellen"
-            className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-[#4D6936] text-rosa-gold hover:bg-[#5D764A] transition-colors"
+            className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-[#4D6936] text-rosa-gold hover:bg-[#5D764A] hover:text-rosa-white transition-colors"
           >
             Anfrage senden
           </Link>

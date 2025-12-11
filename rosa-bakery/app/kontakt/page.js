@@ -45,10 +45,10 @@ export default async function Kontakt({ searchParams }) {
           <div className="text-sm space-y-1">
             <p className="font-medium">E-Mail</p>
             <a
-              href="mailto:rosa.bakery@email.com"
+              href="mailto:rosa.Bäckerei@email.com"
               className="underline-offset-4 hover:underline text-rosa-green"
             >
-              rosa.bakery@email.com
+              rosa.Bäckerei@email.com
             </a>
           </div>
           <div className="text-sm space-y-1">
