@@ -18,7 +18,7 @@ export default function Produkte() {
 
   return (
     <div className="py-10 space-y-10">
-      {/* Intro */}
+      {/* INTRO */}
       <section className="space-y-3">
         <p className="text-xs tracking-[0.25em] uppercase text-rosa-cream">
           Sortiment
@@ -82,12 +82,15 @@ export default function Produkte() {
           {festtagstorten.map((cake) => (
             <article
               key={cake.id}
-              className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3"
+              className="group space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10"
             >
-              <div
-                className="aspect-4/5 rounded-lg bg-[#F5F1E2] bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${cake.image})` }}
-              />
+              <div className="aspect-4/5 rounded-lg overflow-hidden bg-[#F5F1E2]">
+                <div
+                  className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.05]"
+                  style={{ backgroundImage: `url(${cake.image})` }}
+                />
+              </div>
+
               <div className="px-1 pb-2 text-rosa-green space-y-1">
                 <h3 className="text-sm font-semibold">{cake.name}</h3>
                 <p className="text-xs text-rosa-green-muted">{cake.price}</p>
@@ -114,12 +117,15 @@ export default function Produkte() {
           {hochzeitstorten.map((cake) => (
             <article
               key={cake.id}
-              className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3"
+              className="group space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10"
             >
-              <div
-                className="aspect-4/5 rounded-lg bg-[#F5F1E2] bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${cake.image})` }}
-              />
+              <div className="aspect-4/5 rounded-lg overflow-hidden bg-[#F5F1E2]">
+                <div
+                  className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.05]"
+                  style={{ backgroundImage: `url(${cake.image})` }}
+                />
+              </div>
+
               <div className="px-1 pb-2 text-rosa-green space-y-1">
                 <h3 className="text-sm font-semibold">{cake.name}</h3>
                 <p className="text-xs text-rosa-green-muted">{cake.price}</p>
@@ -147,12 +153,15 @@ export default function Produkte() {
           {delikatessen.map((cake) => (
             <article
               key={cake.id}
-              className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3"
+              className="group space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10"
             >
-              <div
-                className="aspect-4/5 rounded-lg bg-[#F5F1E2] bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${cake.image})` }}
-              />
+              <div className="aspect-4/5 rounded-lg overflow-hidden bg-[#F5F1E2]">
+                <div
+                  className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.05]"
+                  style={{ backgroundImage: `url(${cake.image})` }}
+                />
+              </div>
+
               <div className="px-1 pb-2 text-rosa-green space-y-1">
                 <h3 className="text-sm font-semibold">{cake.name}</h3>
                 <p className="text-xs text-rosa-green-muted">{cake.price}</p>

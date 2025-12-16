@@ -92,7 +92,7 @@ export const products = [
   ========================== */
   {
     id: "deli-1",
-    name: "Gefülltes Gebäck",
+    name: "Dattel-Gefülltes Gebäck",
     category: "delikatessen",
     price: "Ab CHF 30.–",
     featured: true,
@@ -116,7 +116,7 @@ export const products = [
   },
   {
     id: "deli-4",
-    name: "Vanilla cookies",
+    name: "Safran-Zitronen cookies",
     category: "delikatessen",
     price: "Ab CHF 24.–",
     featured: false,
@@ -124,7 +124,7 @@ export const products = [
   },
   {
     id: "deli-5",
-    name: "Safranbrötchen",
+    name: "Vanilla-Gefülltes Safranbrötchen",
     category: "delikatessen",
     price: "Ab CHF 26.–",
     featured: false,
