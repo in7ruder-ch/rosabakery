@@ -21,18 +21,21 @@ export default function UeberUns() {
           <p className="text-sm md:text-base text-rosa-cream max-w-xl leading-relaxed">
             Unser Ziel ist es, jede Bestellung so persönlich wie möglich zu
             begleiten. Wir nehmen uns Zeit, hören zu und entwickeln gemeinsam mit
-            dir eine Torte, die nicht nur geschmacklich überzeugt, sondern sich nach
-            „dir“ anfühlt – individuell, liebevoll und einzigartig.
+            dir eine Torte, die nicht nur geschmacklich überzeugt, sondern sich
+            nach „dir“ anfühlt – individuell, liebevoll und einzigartig.
           </p>
         </div>
 
-        {/* Platz für Foto: Team / Backstube */}
-        <div className="aspect-[4/5] md:aspect-[3/4] rounded-xl bg-white/10 border border-[#D6CEA9]/60 overflow-hidden">
-          {/* Hier kannst du später ein Bild von euch / der Backstube einfügen */}
+        {/* FOTO 1 */}
+        <div className="group aspect-[4/5] md:aspect-[3/4] rounded-xl border border-[#D6CEA9]/60 overflow-hidden bg-white/10">
+          <div
+            className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+            style={{ backgroundImage: "url('/img/we-1.jpg')" }}
+          />
         </div>
       </section>
 
-      {/* STORY BLOCK – weich, nicht zu “kartig” */}
+      {/* STORY BLOCK */}
       <section className="space-y-4">
         <div className="rounded-xl border border-[#D6CEA9]/40 bg-white/5 px-6 py-7 space-y-3">
           <h2 className="text-lg text-center md:text-xl font-semibold text-rosa-white">
@@ -62,9 +65,12 @@ export default function UeberUns() {
 
       {/* QUALITÄT & SERVICE + FOTO */}
       <section className="grid gap-8 md:grid-cols-2 items-center">
-        {/* Zweiter Fotoplatz: Detail / Torte / Dekoration */}
-        <div className="aspect-[4/5] md:aspect-[3/4] rounded-xl bg-white/10 border border-[#D6CEA9]/60 overflow-hidden">
-          {/* Hier kannst du später ein Mood-/Detailbild einfügen */}
+        {/* FOTO 2 */}
+        <div className="group aspect-[4/5] md:aspect-[3/4] rounded-xl border border-[#D6CEA9]/60 overflow-hidden bg-white/10">
+          <div
+            className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+            style={{ backgroundImage: "url('/img/we-2.jpg')" }}
+          />
         </div>
 
         <div className="space-y-4">
