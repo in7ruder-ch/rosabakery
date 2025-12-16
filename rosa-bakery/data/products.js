@@ -1,86 +1,133 @@
-// data/products.js
-
 export const products = [
-  // FESTTAGSTORTEN
+  /* =========================
+     FESTTAGSTORTEN
+  ========================== */
   {
     id: "fest-1",
-    name: "Festtagstorte Beeren",
-    price: "Ab CHF 80.–",
+    name: "Granate Torte",
     category: "festtagstorten",
+    price: "Ab CHF 80.–",
     featured: true,
+    image: "/img/products/festtagstorten/fiesta-1.jpeg",
   },
   {
     id: "fest-2",
-    name: "Schokoladen-Traum",
-    price: "Ab CHF 85.–",
+    name: "Weisse Schokoladen Torte",
     category: "festtagstorten",
+    price: "Ab CHF 85.–",
     featured: true,
+    image: "/img/products/festtagstorten/fiesta-2.jpeg",
   },
   {
     id: "fest-3",
-    name: "Zitronen-Torte",
-    price: "Ab CHF 80.–",
+    name: "Honig & Vanille Torte",
     category: "festtagstorten",
+    price: "Ab CHF 80.–",
     featured: true,
+    image: "/img/products/festtagstorten/fiesta-3.jpeg",
   },
   {
     id: "fest-4",
-    name: "Nuss-Karamell",
-    price: "Ab CHF 90.–",
+    name: "Nuss & Karamell Torte",
     category: "festtagstorten",
+    price: "Ab CHF 90.–",
     featured: false,
+    image: "/img/products/festtagstorten/fiesta-4.jpeg",
+  },
+  {
+    id: "fest-5",
+    name: "Erdbeere Torte",
+    category: "festtagstorten",
+    price: "Ab CHF 95.–",
+    featured: false,
+    image: "/img/products/festtagstorten/fiesta-5.jpeg",
   },
 
-  // HOCHZEITSTORTEN
+  /* =========================
+     HOCHZEITSTORTEN
+  ========================== */
   {
     id: "hoch-1",
     name: "Hochzeitstorte Klassik",
-    price: "Ab CHF 150.–",
     category: "hochzeitstorten",
+    price: "Ab CHF 150.–",
     featured: true,
+    image: "/img/products/hochzeitstorten/boda-1.jpeg",
   },
   {
     id: "hoch-2",
-    name: "Semi-Naked Torte",
-    price: "Ab CHF 180.–",
+    name: "Semi-Naked Hochzeitstorte",
     category: "hochzeitstorten",
+    price: "Ab CHF 180.–",
     featured: true,
+    image: "/img/products/hochzeitstorten/boda-2.jpeg",
   },
   {
     id: "hoch-3",
     name: "Blumentorte 3-stöckig",
-    price: "Ab CHF 220.–",
     category: "hochzeitstorten",
+    price: "Ab CHF 220.–",
     featured: true,
+    image: "/img/products/hochzeitstorten/boda-3.jpeg",
+  },
+  {
+    id: "hoch-4",
+    name: "Moderne Hochzeitstorte",
+    category: "hochzeitstorten",
+    price: "Ab CHF 200.–",
+    featured: false,
+    image: "/img/products/hochzeitstorten/boda-4.jpeg",
+  },
+  {
+    id: "hoch-5",
+    name: "Minimalistische Hochzeitstorte",
+    category: "hochzeitstorten",
+    price: "Ab CHF 170.–",
+    featured: false,
+    image: "/img/products/hochzeitstorten/boda-5.jpeg",
   },
 
-  // DELIKATESSEN
+  /* =========================
+     DELIKATESSEN
+  ========================== */
   {
-    id: "del-1",
-    name: "Cupcakes Mixed Box (6 Stk.)",
+    id: "deli-1",
+    name: "Gefülltes Gebäck",
+    category: "delikatessen",
     price: "Ab CHF 30.–",
-    category: "delikatessen",
     featured: true,
+    image: "/img/products/delikatessen/deli-1.jpeg",
   },
   {
-    id: "del-2",
-    name: "Macarons Selection",
-    price: "Ab CHF 32.–",
-    category: "delikatessen",
-    featured: true,
-  },
-  {
-    id: "del-3",
+    id: "deli-2",
     name: "Mini-Törtchen",
-    price: "Ab CHF 28.–",
     category: "delikatessen",
+    price: "Ab CHF 32.–",
     featured: true,
+    image: "/img/products/delikatessen/deli-2.jpeg",
   },
   {
-    id: "del-4",
-    name: "Brownie Bites",
-    price: "Ab CHF 24.–",
+    id: "deli-3",
+    name: "Schokoladen-Käsekuchen",
     category: "delikatessen",
+    price: "Ab CHF 28.–",
+    featured: true,
+    image: "/img/products/delikatessen/deli-3.jpeg",
+  },
+  {
+    id: "deli-4",
+    name: "Vanilla cookies",
+    category: "delikatessen",
+    price: "Ab CHF 24.–",
     featured: false,
+    image: "/img/products/delikatessen/deli-4.jpeg",
+  },
+  {
+    id: "deli-5",
+    name: "Safranbrötchen",
+    category: "delikatessen",
+    price: "Ab CHF 26.–",
+    featured: false,
+    image: "/img/products/delikatessen/deli-5.jpeg",
   },
 ];

@@ -3,17 +3,9 @@
 import Link from "next/link";
 import { products } from "../../data/products";
 
-const festtagstorten = products.filter(
-  (p) => p.category === "festtagstorten"
-);
-
-const hochzeitstorten = products.filter(
-  (p) => p.category === "hochzeitstorten"
-);
-
-const delikatessen = products.filter(
-  (p) => p.category === "delikatessen"
-);
+const festtagstorten = products.filter((p) => p.category === "festtagstorten");
+const hochzeitstorten = products.filter((p) => p.category === "hochzeitstorten");
+const delikatessen = products.filter((p) => p.category === "delikatessen");
 
 export default function Produkte() {
   const handleScrollTo = (id) => (event) => {
@@ -67,7 +59,7 @@ export default function Produkte() {
         </button>
         <Link
           href="/bestellen"
-          className="rounded-full px-4 py-2 text-rosa-green bg-[#D6CEA9] text-xs md:text-sm font-medium hover:bg-[#E5DFC7]  transition-colors"
+          className="rounded-full px-4 py-2 text-rosa-green bg-[#D6CEA9] text-xs md:text-sm font-medium hover:bg-[#E5DFC7] transition-colors"
         >
           Individuelle Torte anfragen
         </Link>
@@ -81,7 +73,7 @@ export default function Produkte() {
               Festtagstorten
             </h2>
             <p className="text-sm text-rosa-cream">
-              Für Geburtstage, Jubiläen, Abschlüsse und alle besonderen Momente.
+              Für Geburtstage, Jubiläen, Abschlüsse und alle besonderen Momente. Geschmacksrichtungen &amp; Design nach Absprache.
             </p>
           </div>
         </div>
@@ -92,13 +84,13 @@ export default function Produkte() {
               key={cake.id}
               className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3"
             >
-              <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
+              <div
+                className="aspect-4/5 rounded-lg bg-[#F5F1E2] bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${cake.image})` }}
+              />
               <div className="px-1 pb-2 text-rosa-green space-y-1">
                 <h3 className="text-sm font-semibold">{cake.name}</h3>
                 <p className="text-xs text-rosa-green-muted">{cake.price}</p>
-                <p className="text-xs text-rosa-green-detail">
-                  Geschmacksrichtungen &amp; Design nach Absprache.
-                </p>
               </div>
             </article>
           ))}
@@ -113,7 +105,7 @@ export default function Produkte() {
               Hochzeitstorten
             </h2>
             <p className="text-sm text-rosa-cream">
-              Elegante Torten, abgestimmt auf euer Hochzeitskonzept.
+              Elegante Torten, abgestimmt auf euer Hochzeitskonzept. Grössen (Stockwerke), Blumen &amp; Dekor personalisierbar.
             </p>
           </div>
         </div>
@@ -124,13 +116,13 @@ export default function Produkte() {
               key={cake.id}
               className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3"
             >
-              <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
+              <div
+                className="aspect-4/5 rounded-lg bg-[#F5F1E2] bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${cake.image})` }}
+              />
               <div className="px-1 pb-2 text-rosa-green space-y-1">
                 <h3 className="text-sm font-semibold">{cake.name}</h3>
                 <p className="text-xs text-rosa-green-muted">{cake.price}</p>
-                <p className="text-xs text-rosa-green-detail">
-                  Grössen (Stockwerke), Blumen &amp; Dekor personalisierbar.
-                </p>
               </div>
             </article>
           ))}
@@ -146,24 +138,24 @@ export default function Produkte() {
             </h2>
             <p className="text-sm text-rosa-cream">
               Kleine süsse Highlights – ideal für Apéros, Geschenke oder Candy
-              Tables.
+              Tables. Ideal kombinierbar mit Torten oder als eigenes Sweet-Table.
             </p>
           </div>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {delikatessen.map((item) => (
+          {delikatessen.map((cake) => (
             <article
-              key={item.id}
+              key={cake.id}
               className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-3"
             >
-              <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
+              <div
+                className="aspect-4/5 rounded-lg bg-[#F5F1E2] bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${cake.image})` }}
+              />
               <div className="px-1 pb-2 text-rosa-green space-y-1">
-                <h3 className="text-sm font-semibold">{item.name}</h3>
-                <p className="text-xs text-rosa-green-muted">{item.price}</p>
-                <p className="text-xs text-rosa-green-detail">
-                  Ideal kombinierbar mit Torten oder als eigenes Sweet-Table.
-                </p>
+                <h3 className="text-sm font-semibold">{cake.name}</h3>
+                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
               </div>
             </article>
           ))}

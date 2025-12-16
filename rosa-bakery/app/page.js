@@ -13,14 +13,16 @@ const featuredDelikatessen = products
   .filter((p) => p.category === "delikatessen" && p.featured)
   .slice(0, 3);
 
-
 export default function Home() {
   return (
     <div className="py-10 space-y-10">
       {/* HERO 3 COLUMNAS */}
       <section className="grid gap-6 md:grid-cols-3 items-stretch">
         {/* Columna izquierda - imagen */}
-        <div className="aspect-3/4 rounded-xl bg-white/90 border-[#D6CEA9]/50 overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/img/cake-1.jpeg')" }}></div>
+        <div
+          className="aspect-3/4 rounded-xl bg-white/90 border-[#D6CEA9]/50 overflow-hidden bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/img/cake-1.jpeg')" }}
+        ></div>
 
         {/* Columna central - texto + CTA */}
         <div className="rounded-xl bg-white/90  border-[#D6CEA9]/80 px-6 py-8 flex flex-col justify-center gap-4 text-rosa-green">
@@ -52,22 +54,18 @@ export default function Home() {
         </div>
 
         {/* Columna derecha - imagen */}
-        <div className="aspect-3/4 rounded-xl bg-white/10  border-[#D6CEA9]/50 overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/img/cake-2.jpg')" }}></div>
+        <div
+          className="aspect-3/4 rounded-xl bg-white/10  border-[#D6CEA9]/50 overflow-hidden bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/img/cake-2.jpg')" }}
+        ></div>
       </section>
 
       {/* FRANJA DE NACHRICHT / MESSAGE STRIP */}
       <section className="relative rounded-xl h-40 flex items-center justify-center text-center overflow-hidden">
-
-        {/* Imagen DE FONDO independiente */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat filter brightness-70 opacity-80"
           style={{ backgroundImage: "url('/img/texture-4.jpg')" }}
         />
-
-        {/* Overlay opcional para suavizar (si querés, se puede borrar) */}
-        {/* <div className="absolute inset-0 bg-[#FDFAE9]/60" /> */}
-
-        {/* TEXTO - siempre arriba */}
         <p className="relative z-10 text-sm md:text-lg tracking-wide text-rosa-white font-semibold px-4">
           Alle Torten werden individuell nach deinem Geschmack und Stil kreiert.
         </p>
@@ -96,9 +94,15 @@ export default function Home() {
           {featuredFesttagstorten.map((cake) => (
             <div
               key={cake.id}
-              className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2"
+              className="group space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10"
             >
-              <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
+              <div className="aspect-4/5 rounded-lg overflow-hidden bg-[#F5F1E2]">
+                <div
+                  className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.05]"
+                  style={{ backgroundImage: `url(${cake.image})` }}
+                />
+              </div>
+
               <div className="px-1 pb-2 text-rosa-green">
                 <p className="text-sm font-medium">{cake.name}</p>
                 <p className="text-xs text-rosa-green-muted">{cake.price}</p>
@@ -131,9 +135,15 @@ export default function Home() {
           {featuredHochzeitstorten.map((cake) => (
             <div
               key={cake.id}
-              className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2"
+              className="group space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10"
             >
-              <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
+              <div className="aspect-4/5 rounded-lg overflow-hidden bg-[#F5F1E2]">
+                <div
+                  className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.05]"
+                  style={{ backgroundImage: `url(${cake.image})` }}
+                />
+              </div>
+
               <div className="px-1 pb-2 text-rosa-green">
                 <p className="text-sm font-medium">{cake.name}</p>
                 <p className="text-xs text-rosa-green-muted">{cake.price}</p>
@@ -163,15 +173,21 @@ export default function Home() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {featuredDelikatessen.map((item) => (
+          {featuredDelikatessen.map((cake) => (
             <div
-              key={item.id}
-              className="space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2"
+              key={cake.id}
+              className="group space-y-2 rounded-xl border border-[#D6CEA9]/70 bg-white p-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10"
             >
-              <div className="aspect-4/5 rounded-lg bg-[#F5F1E2]" />
+              <div className="aspect-4/5 rounded-lg overflow-hidden bg-[#F5F1E2]">
+                <div
+                  className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.05]"
+                  style={{ backgroundImage: `url(${cake.image})` }}
+                />
+              </div>
+
               <div className="px-1 pb-2 text-rosa-green">
-                <p className="text-sm font-medium">{item.name}</p>
-                <p className="text-xs text-rosa-green-muted">{item.price}</p>
+                <p className="text-sm font-medium">{cake.name}</p>
+                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
               </div>
             </div>
           ))}
