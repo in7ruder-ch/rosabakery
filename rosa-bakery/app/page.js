@@ -102,11 +102,6 @@ export default function Home() {
                   style={{ backgroundImage: `url(${cake.image})` }}
                 />
               </div>
-
-              <div className="px-1 pb-2 text-rosa-green">
-                <p className="text-sm font-medium">{cake.name}</p>
-                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
-              </div>
             </div>
           ))}
         </div>
@@ -142,11 +137,6 @@ export default function Home() {
                   className="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.05]"
                   style={{ backgroundImage: `url(${cake.image})` }}
                 />
-              </div>
-
-              <div className="px-1 pb-2 text-rosa-green">
-                <p className="text-sm font-medium">{cake.name}</p>
-                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
               </div>
             </div>
           ))}
@@ -185,10 +175,6 @@ export default function Home() {
                 />
               </div>
 
-              <div className="px-1 pb-2 text-rosa-green">
-                <p className="text-sm font-medium">{cake.name}</p>
-                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
-              </div>
             </div>
           ))}
         </div>

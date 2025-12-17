@@ -136,8 +136,8 @@ export default function RootLayout({ children }) {
               <a href="mailto:rosa.Bäckerei@email.com" className="hover:underline">
                 rosa.Bäckerei@email.com
               </a>
-              <a href="tel:+41000000000" className="hover:underline block">
-                +41 00 000 00 00
+              <a href="tel:+410762234462" className="hover:underline block">
+                +41 076 223 44 62
               </a>
             </div>
 
@@ -154,13 +154,13 @@ export default function RootLayout({ children }) {
           </div>
 
           <div className="text-center text-xs text-rosa-gold-subtle mt-8">
-            © {new Date().getFullYear()} Rosa Bäckerei — Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Rezai Bäckerei — Alle Rechte vorbehalten.
           </div>
         </footer>
 
         {/* WHATSAPP FLOAT */}
         <a
-          href="https://wa.me/41000000000"
+          href="https://wa.me/410762234462"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-5 right-5 z-50 bg-white text-rosa-green px-4 py-3 rounded-full shadow-lg border border-[#D6CEA9] hover:bg-[#FFF8E8] transition-colors"

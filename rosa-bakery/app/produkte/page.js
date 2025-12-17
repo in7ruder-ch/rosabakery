@@ -91,10 +91,7 @@ export default function Produkte() {
                 />
               </div>
 
-              <div className="px-1 pb-2 text-rosa-green space-y-1">
-                <h3 className="text-sm font-semibold">{cake.name}</h3>
-                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
-              </div>
+
             </article>
           ))}
         </div>
@@ -126,10 +123,7 @@ export default function Produkte() {
                 />
               </div>
 
-              <div className="px-1 pb-2 text-rosa-green space-y-1">
-                <h3 className="text-sm font-semibold">{cake.name}</h3>
-                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
-              </div>
+
             </article>
           ))}
         </div>
@@ -162,10 +156,7 @@ export default function Produkte() {
                 />
               </div>
 
-              <div className="px-1 pb-2 text-rosa-green space-y-1">
-                <h3 className="text-sm font-semibold">{cake.name}</h3>
-                <p className="text-xs text-rosa-green-muted">{cake.price}</p>
-              </div>
+
             </article>
           ))}
         </div>
