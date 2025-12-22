@@ -10,22 +10,22 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Base / crema */
   --rosa-bg: #FDFAE9;
   --rosa-bg-soft: #FFFDF5;
-  --rosa-green: #4d6b35;
+
+  /* Verde (estructura / acciones) */
+  --rosa-green: #4D6936;
   --rosa-green-soft: #5D764A;
   --rosa-green-light: #708A59;
-  --rosa-gold: #fdd8a3;
+
+  /* Dorado (acento premium) */
+  --rosa-gold: #D6CEA9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-/* === NUEVAS UTILIDADES DE TEXTO === */
+/* === UTILIDADES DE TEXTO === */
 .text-rosa-green {
   color: var(--rosa-green);
 }
@@ -68,11 +68,8 @@ html {
 
 html,
 body {
-  background-color: var(--rosa-green);
-  background-image: url("/img/back-texture-seamless-2.png");
-  background-size: 25%;     /* ajustá para más/menos textura */
-  background-repeat: repeat;  /* textura infinita */
-  opacity: 1;
+  /* Canvas blanco */
+  background-color: var(--background);
 }
 
 .hover\:text-rosa-white:hover {

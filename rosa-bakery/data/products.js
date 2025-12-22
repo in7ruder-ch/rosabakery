@@ -86,6 +86,30 @@ export const products = [
     featured: false,
     image: "/img/products/hochzeitstorten/boda-5.jpeg",
   },
+  {
+    id: "hoch-6",
+    name: "Minimalistische Hochzeitstorte",
+    category: "hochzeitstorten",
+    price: "Ab CHF 170.–",
+    featured: false,
+    image: "/img/products/hochzeitstorten/boda-6.jpeg",
+  },
+  {
+    id: "hoch-7",
+    name: "Minimalistische Hochzeitstorte",
+    category: "hochzeitstorten",
+    price: "Ab CHF 170.–",
+    featured: false,
+    image: "/img/products/hochzeitstorten/boda-7.jpeg",
+  },
+  {
+    id: "hoch-8",
+    name: "Minimalistische Hochzeitstorte",
+    category: "hochzeitstorten",
+    price: "Ab CHF 170.–",
+    featured: false,
+    image: "/img/products/hochzeitstorten/boda-8.jpeg",
+  },
 
   /* =========================
      DELIKATESSEN
